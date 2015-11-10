@@ -1,0 +1,37 @@
+﻿<html>
+<head>
+<title>Add</title>
+<link rel="stylesheet" href="/static/add.css" type="text/css"></link>
+</head>
+<body>
+    <div class="msg">
+    {% if msg %}
+        {% for m in msg %}
+        <p style="color: red;">{{m}}</p>
+        {% endfor %}
+    {% endif %}
+    </div>
+<div class="text">
+<p>新增图书</p>
+</div>
+<div>
+    <form method="post" action="">
+    {% csrf_token %}
+    <table border=1 align="center">
+     <tr>
+      <th>图书名</th><th>ISBN</th><th>作者ID</th><th>出版商</th><th>出版日期</th><th>价格</th>
+     </tr>
+     <tr>
+      <td><input name="Title" type="text"></td>
+      <td><input name="ISBN" type="text"></td>
+      <td><input name="AuthorID" type="text"></td>
+      <td><input name="Publisher" type="text"></td>
+      <td><input name="PublishDate" type="text"></td>
+      <td><input name="Price" type="text"></td>  
+      <td><input type="submit" value="保存"> <input type="reset" value="重填"></td>
+     </tr>
+    </table>
+    </form>
+</div>
+</body>
+</html>

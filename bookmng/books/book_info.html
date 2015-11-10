@@ -1,0 +1,45 @@
+﻿<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+  <title>Search</title>
+  <link rel="stylesheet" href="/static/book_info.css" type="text/css"></link>
+</head>
+<body>
+<div class="text">
+<p>图书信息</p>
+</div>
+<div id="table_box1">
+<table class="table">
+ <tr>
+  <th>ISBN</th><th>Title</th><th>AuthorID</th><th>Publisher</th><th>PublishDate</th><th>Price</th><th>操作</th>
+  </tr>
+ <tr>
+  <td>{{ book_info.ISBN }}</td>
+  <td>{{ book_info.Title }}</td>
+  <td>{{ book_info.AuthorID}}</td>
+  <td>{{ book_info.Publisher }}</td>
+  <td>{{ book_info.PublishDate }}</td>
+  <td>{{ book_info.Price }}</td>
+  <td><a href="/delete/?ISBN={{book_info.ISBN}}&AuID={{book_info.AuthorID}}">删除</a>
+</td>
+ </tr>
+</table>
+</div>
+<div class="text">
+<p>作者信息</p>
+</div>
+<div id="table_box2">
+<table class="table">
+  <tr>
+   <th>AuthorID</th><th>Name</th><th>Age</th><th>Country</th>
+  </tr>
+ <tr>
+  <td>{{ Author_info.AuthorID }}</td>
+  <td>{{ Author_info.Name }}</td>
+  <td>{{ Author_info.Age}}</td>
+  <td>{{ Author_info.Country }}</td>
+ </tr>
+ </table>
+ </div>
+ </body>
+ </html>

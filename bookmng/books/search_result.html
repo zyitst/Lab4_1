@@ -1,0 +1,27 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+  <title>Search</title>
+  <link rel="stylesheet" href="/static/search_result.css" type="text/css"></link>
+</head>
+<body>
+<div id="tex">
+<p>搜索结果</p>
+</div>
+<div id=table_box>
+<table id="tab1">
+    <tr><th>Title</th><th>操作</th></tr>
+{%if books %}
+    {% for book in books %}
+    <tr>
+    <td><a href="/book_info/?ISBN={{book.ISBN}}">{{ book.Title }}</a></td>
+    <td><a href="/delete/?ISBN={{book.ISBN}}&AuID={{book.AuthorID}}">删除</a></td>
+    </tr>
+    {% endfor %}
+{% else %}
+    <p>No books matched your search!</p>
+{% endif %}
+</table>
+</div>
+</body>
+</html>
