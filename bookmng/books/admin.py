@@ -12,3 +12,4 @@ class BookAdmin(admin.ModelAdmin):
     filter_horizontal = ('AuthorID',)
 admin.site.register(Author, AuthorAdmin)
 admin.site.register(Book)
+#修改admin.py

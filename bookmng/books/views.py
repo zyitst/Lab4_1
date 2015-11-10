@@ -66,3 +66,4 @@ def add_book(request):
         return render_to_response("add_book.html")
 #def add_author(request):
 '''
+#修改views.py

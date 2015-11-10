@@ -21,3 +21,4 @@ class Book(models.Model):
         return self.Title
     class Meta:
         ordering = ['Title']
+#修改model.py
